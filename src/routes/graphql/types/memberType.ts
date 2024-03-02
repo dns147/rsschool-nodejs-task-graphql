@@ -1,11 +1,20 @@
-import { GraphQLFloat, GraphQLInt, GraphQLNonNull, GraphQLObjectType } from "graphql";
-import { UUIDType } from "./uuid.js";
+import { GraphQLFloat, GraphQLID, GraphQLInt, GraphQLList, GraphQLNonNull, GraphQLObjectType } from "graphql";
+import { ProfileType } from "./profile.js";
 
 export const MemberType = new GraphQLObjectType({
   name: 'memberType',
   fields: () => ({
-    id: { type: new GraphQLNonNull(UUIDType) },
+    id: { type: new GraphQLNonNull(GraphQLID) },
     discount: { type: new GraphQLNonNull(GraphQLFloat) },
-    postsLimitPerMonth: { type: new GraphQLNonNull(GraphQLInt) }
+    postsLimitPerMonth: { type: new GraphQLNonNull(GraphQLInt) },
+    profiles: { type: new GraphQLList(ProfileType) },
   }),
 });
+
+// model MemberType {
+//   id                 String @id
+//   discount           Float
+//   postsLimitPerMonth Int
+
+//   profiles Profile[]
+// }
