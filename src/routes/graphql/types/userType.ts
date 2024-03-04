@@ -60,14 +60,3 @@ export const TUserType = new GraphQLObjectType({
     },
   }),
 });
-
-// model User {
-//   id      String @id @default(uuid())
-//   name    String
-//   balance Float
-
-//   profile          Profile?
-//   posts            Post[]
-//   userSubscribedTo SubscribersOnAuthors[] @relation("subscriber")
-//   subscribedToUser SubscribersOnAuthors[] @relation("author")
-// }

@@ -35,14 +35,3 @@ export const TProfileType = new GraphQLObjectType({
     memberTypeId: { type: MemberEnumType },
   }),
 });
-
-// model Profile {
-//   id          String  @id @default(uuid())
-//   isMale      Boolean
-//   yearOfBirth Int
-
-//   user         User       @relation(fields: [userId], references: [id], onDelete: Cascade)
-//   userId       String     @unique
-//   memberType   MemberType @relation(fields: [memberTypeId], references: [id], onDelete: Restrict)
-//   memberTypeId String
-// }

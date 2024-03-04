@@ -21,11 +21,3 @@ export const TMemberType = new GraphQLObjectType({
     },
   }),
 });
-
-// model MemberType {
-//   id                 String @id
-//   discount           Float
-//   postsLimitPerMonth Int
-
-//   profiles Profile[]
-// }

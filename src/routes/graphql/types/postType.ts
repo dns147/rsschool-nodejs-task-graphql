@@ -22,12 +22,3 @@ export const TPostType = new GraphQLObjectType({
     authorId: { type: new GraphQLNonNull(UUIDType) },
   }),
 });
-
-// model Post {
-//   id      String @id @default(uuid())
-//   title   String
-//   content String
-
-//   author   User   @relation(fields: [authorId], references: [id], onDelete: Cascade)
-//   authorId String
-// }
